@@ -1,60 +1,96 @@
 package boletin5.examen04.solucion;
 
-
-public class Fecha
-{
+/**
+ * Clase Fecha: guarda los datos necesarios para crear un obj. fecha
+ * 
+ * @author MariaGM
+ * @version 1
+ */
+public class Fecha {
 	private int dia;
 	private int mes;
 	private int anyo;
-	
-	public Fecha(int dia, int mes, int anyo)
-	{
+
+	/**
+	 * Constructor Fecha
+	 * 
+	 * @param dia dia de la fecha a crear
+	 * @param mes mes de la fecha a crear
+	 * @param anyo año de la fecha a crear
+	 */
+	public Fecha(int dia, int mes, int anyo) {
 		this.dia = dia;
 		this.mes = mes;
 		this.anyo = anyo;
 	}
 
-	public int getDia()
-	{
+	/**
+	 * Getter atributo dia (Fecha)
+	 * 
+	 * @return devuelve un int con el dia de la fecha solicitada
+	 */
+	public int getDia() {
 		return dia;
 	}
 
-	public void setDia(int dia)
-	{
+	/**
+	 * Setter atributo dia (Fecha)
+	 * 
+	 * @param dia: dia de la fecha a setear
+	 */
+	public void setDia(int dia) {
 		this.dia = dia;
 	}
 
-	public int getMes()
-	{
+	/**
+	 * Getter atributo mes (Fecha)
+	 * 
+	 * @return devuelve un int con el mes de la fecha solicitada
+	 */
+	public int getMes() {
 		return mes;
 	}
 
-	public void setMes(int mes)
-	{
+	/**
+	 * Setter atributo mes (Fecha)
+	 * 
+	 * @param mes mes de la fecha a setear
+	 */
+	public void setMes(int mes) {
 		this.mes = mes;
 	}
 
-	public int getAnyo()
-	{
+	/**
+	 * Getter atributo ano (Fecha)
+	 * 
+	 * @return devuelve un int con el año de la fecha solicitada
+	 */
+	public int getAnyo() {
 		return anyo;
 	}
 
-	public void setAnyo(int anyo)
-	{
+	/**
+	 * Setter atributo ano (Fecha)
+	 * 
+	 * @param anyo año de la fecha a setear
+	 */
+	public void setAnyo(int anyo) {
 		this.anyo = anyo;
 	}
 
+	/**
+	 * ToString de Clase Fecha
+	 */
 	@Override
-	public String toString()
-	{
-		return ""+this.dia+"/"+this.mes+"/"+this.anyo;
+	public String toString() {
+		return "" + this.dia + "/" + this.mes + "/" + this.anyo;
 	}
-	
-	
-	
+
+	/**
+	 * HashCode de Clase Fecha
+	 */
 	@Override
-	public int hashCode()
-	{
+	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + anyo;
@@ -63,9 +99,11 @@ public class Fecha
 		return result;
 	}
 
+	/**
+	 * Equals de Clase Fecha
+	 */
 	@Override
-	public boolean equals(Object obj)
-	{
+	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -82,18 +120,21 @@ public class Fecha
 		return true;
 	}
 
-	public int compareTo(Fecha otra)
-	{
+	/**
+	 * CompareTo de Clase Fecha
+	 * 
+	 * @param otra fecha a comprar
+	 * @return devuelve un int con la respuesta de la comparacion.
+	 */
+	public int compareTo(Fecha otra) {
 		int res = this.anyo - otra.anyo;
-		
-		if(res == 0)
+
+		if (res == 0)
 			res = this.mes - otra.mes;
-		if(res == 0)
+		if (res == 0)
 			res = this.dia - otra.dia;
-		
+
 		return res;
 	}
-	
-	
 
 }
